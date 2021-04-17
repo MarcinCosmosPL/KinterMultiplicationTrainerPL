@@ -82,7 +82,7 @@ def check():
         przycisk1.configure(state="disabled", text ="loading")
         przycisk2.configure(state="disabled", text ="loading") #na moment nie można nacisnąć przycisków, a tekst wskazuje, że to się zmieni
         #bez tego można było kliknąć zakończ zanim zrobił się "after" i błędy w konsoli wyskakiwały
-        t.after(3000, commentRef)
+        t.after(2000, commentRef)
 
 
 
@@ -107,6 +107,7 @@ przycisk1.pack(expand=tkinter.YES)
 przycisk2 = tkinter.Button(t,text="Zakończ", command=howIdo)
 przycisk2.pack(expand=tkinter.YES)
 
-
+#wyświetlaj główne okno cały czas:
+t.mainloop()
 
 
